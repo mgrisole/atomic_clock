@@ -18,7 +18,7 @@ export default {
   },
   data() {
     return {
-      timer: moment().format('LTS'),
+      timer: '',
     };
   },
   methods: {
@@ -29,6 +29,7 @@ export default {
     }
   },
   mounted() {
+    moment.locale('fr');
     this.update();
   },
 };
