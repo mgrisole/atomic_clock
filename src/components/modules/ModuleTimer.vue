@@ -9,13 +9,12 @@
 </template>
 
 <script>
-import moment from "moment";
+import moment from 'moment';
+import ModuleTemplate from './ModuleTemplate.vue';
 
 export default {
   name: 'ModuleTimer',
-  props: {
-    msg: String,
-  },
+  extends: ModuleTemplate,
   data() {
     return {
       timer: '',
@@ -23,10 +22,10 @@ export default {
   },
   methods: {
     update() {
-      setInterval( () => {
+      setInterval(() => {
         this.timer = moment().format('LTS');
-      }, 1000 );
-    }
+      }, 1000);
+    },
   },
   mounted() {
     moment.locale('fr');

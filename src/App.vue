@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import ModuleTimer from './components/ModuleTimer.vue';
+import ModuleTimer from './components/modules/ModuleTimer.vue';
 
 export default {
   name: 'App',
@@ -17,17 +17,6 @@ export default {
   },
   data() {
     return {
-      clipped: false,
-      drawer: true,
-      fixed: false,
-      items: [{
-        icon: 'bubble_chart',
-        title: 'Inspire',
-      }],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js',
     };
   },
 };
