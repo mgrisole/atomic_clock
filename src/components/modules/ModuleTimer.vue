@@ -10,11 +10,9 @@
 
 <script>
 import moment from 'moment';
-import ModuleTemplate from './ModuleTemplate.vue';
 
 export default {
   name: 'ModuleTimer',
-  extends: ModuleTemplate,
   data() {
     return {
       timer: '',
@@ -37,7 +35,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .moduleTimer {
-  height: calc(100vh/2);
   background-color: #326273;
   color: #EEEEEE;
   display: flex;
