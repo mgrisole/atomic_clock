@@ -1,7 +1,7 @@
 <template lang="pug">
   v-container.moduleWeahter(fluid)
-    v-layout(column, align-center)
-    =weather
+    v-layout(column align-center)
+      | {{weather}}
 </template>
 
 <script>

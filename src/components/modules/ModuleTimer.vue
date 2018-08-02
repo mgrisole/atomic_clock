@@ -1,11 +1,7 @@
-<template>
-  <v-container fluid class="moduleTimer">
-    <v-slide-y-transition mode="out-in">
-      <v-layout column align-center>
-        {{timer}}
-      </v-layout>
-    </v-slide-y-transition>
-  </v-container>
+<template lang="pug">
+  v-container.moduleTimer(fluid)
+    v-layout(column align-center)
+      | {{timer}}
 </template>
 
 <script>
@@ -25,8 +21,11 @@ export default {
       }, 1000);
     },
   },
-  mounted() {
+  created() {
     moment.locale('fr');
+    this.timer = moment().format('LTS');
+  },
+  mounted() {
     this.update();
   },
 };

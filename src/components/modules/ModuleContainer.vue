@@ -1,11 +1,8 @@
-<template>
-  <v-container fluid class="moduleContainer">
-    <v-slide-y-transition mode="out-in">
-      <v-layout column align-center>
-        <slot/>
-      </v-layout>
-    </v-slide-y-transition>
-  </v-container>
+<template lang="pug">
+  v-container.moduleContainer(fluid)
+    v-slide-y-transition(mode="out-in")
+      v-layout(column align-center)
+        slot
 </template>
 
 <script>
