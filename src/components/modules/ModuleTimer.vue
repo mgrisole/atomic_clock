@@ -33,11 +33,12 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-.moduleTimer {
-  background-color: #326273;
-  color: #EEEEEE;
-  display: flex;
-  align-items: center;
-}
+<style scoped lang="stylus">
+
+  .moduleTimer
+    background-color: #326273
+    color: #EEEEEE
+    display: flex
+    align-items: center
+
 </style>

@@ -1,43 +1,38 @@
-``<template>
-  <v-container fluid class="moduleWeahter">
-    <v-slide-y-transition mode="out-in">
-      <v-layout column align-center>
-        {{timer}}
-      </v-layout>
-    </v-slide-y-transition>
-  </v-container>
+<template lang="pug">
+  v-container.moduleWeahter(fluid)
+    v-layout(column, align-center)
+    =weather
 </template>
 
 <script>
-import moment from 'moment';
+import openWeather from 'openweather-apis';
 
 export default {
   name: 'ModuleWeather',
   data() {
     return {
-      timer: '',
+      weather: '',
+      metric: '',
     };
   },
-  methods: {
-    update() {
-      setInterval(() => {
-        this.timer = moment().format('LTS');
-      }, 1000);
-    },
-  },
   mounted() {
-    moment.locale('fr');
-    this.update();
+    openWeather.setLang('fr');
+    openWeather.setCity('Toulouse');
+    openWeather.setAPPID('e169fc4be7c5b637dd06aa4f62fc88dd');
+    openWeather.getTemperature((err, temp) => {
+      this.weather = temp;
+    });
   },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-.moduleWeahter {
-  background-color: #326273;
-  color: #EEEEEE;
-  display: flex;
-  align-items: center;
-}
+<style scoped lang="stylus">
+
+  .moduleWeahter
+    background-color: #326273
+    color: #EEEEEE
+    display: flex
+    align-items: center
+
 </style>
