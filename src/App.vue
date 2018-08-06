@@ -10,20 +10,20 @@
 </template>
 
 <script>
-import ModuleContainer from './components/modules/ModuleContainer.vue';
-import ModuleTimer from './components/modules/ModuleTimer.vue';
-import ModuleWeather from './components/modules/ModuleWeather.vue';
+import ModuleContainer from './components/modules/ModuleContainer'
+import ModuleTimer from './components/modules/ModuleTimer'
+import ModuleWeather from './components/modules/ModuleWeather'
 
 export default {
   name: 'App',
   components: {
     ModuleContainer,
     ModuleTimer,
-    ModuleWeather,
+    ModuleWeather
   },
-  data() {
+  data () {
     return {
-    };
-  },
-};
+    }
+  }
+}
 </script>

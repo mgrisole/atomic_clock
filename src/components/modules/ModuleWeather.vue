@@ -5,25 +5,29 @@
 </template>
 
 <script>
-import openWeather from 'openweather-apis';
+import openWeather from 'openweather-apis'
 
 export default {
   name: 'ModuleWeather',
-  data() {
+  data () {
     return {
       weather: '',
-      metric: '',
-    };
+      metric: ''
+    }
   },
-  mounted() {
-    openWeather.setLang('fr');
-    openWeather.setCity('Toulouse');
-    openWeather.setAPPID('e169fc4be7c5b637dd06aa4f62fc88dd');
+  mounted () {
+    openWeather.setLang('fr')
+    openWeather.setCity('Toulouse')
+    openWeather.setAPPID('e169fc4be7c5b637dd06aa4f62fc88dd')
     openWeather.getTemperature((err, temp) => {
-      this.weather = temp;
-    });
-  },
-};
+      if (err) {
+        console.error(err)
+      }
+
+      this.weather = temp
+    })
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

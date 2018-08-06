@@ -1,18 +1,14 @@
 <template lang="pug">
-  v-container.moduleTimer(fluid)
+  v-container.moduleInterface(fluid)
     v-layout(column align-center)
-      | {{timer}}
+      | test
 </template>
 
 <script>
 import moment from 'moment'
-import ModuleInterface from './ModuleInterface'
 
 export default {
-  name: 'ModuleTimer',
-  components: {
-    ModuleInterface
-  },
+  name: 'ModuleInterface',
   data () {
     return {
       timer: ''
@@ -38,7 +34,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="stylus">
 
-  .moduleTimer
+  .moduleInterface
     background-color: #326273
     color: #EEEEEE
     display: flex
