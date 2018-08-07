@@ -5,28 +5,10 @@
 </template>
 
 <script>
-import moment from 'moment'
-
 export default {
   name: 'ModuleInterface',
-  data () {
-    return {
-      timer: ''
-    }
-  },
-  methods: {
-    update () {
-      setInterval(() => {
-        this.timer = moment().format('LTS')
-      }, 1000)
-    }
-  },
-  created () {
-    moment.locale('fr')
-    this.timer = moment().format('LTS')
-  },
-  mounted () {
-    this.update()
+  props: {
+    name: String
   }
 }
 </script>
